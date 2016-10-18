@@ -36,7 +36,7 @@ public class ItemBasedRecommender {
 		
 			while(iter.hasNext()){
 				long usid = iter.nextLong();
-				//includeKnownItems 是否推荐已知的物品
+				//第三个参数includeKnownItems表示是否推荐已知的物品
 				List<RecommendedItem> list = r.recommend(usid, 3, false);
 				System.out.print("usid["+usid+"]");
 				for (RecommendedItem recommendedItem : list) {

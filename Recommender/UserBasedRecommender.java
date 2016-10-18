@@ -39,7 +39,7 @@ public class UserBasedRecommender {
 			
 			while(iter.hasNext()){
 				long usid = iter.nextLong();
-				List<RecommendedItem> list = r.recommend(usid, 3);//为用户usid推荐3个物品
+				List<RecommendedItem> list = r.recommend(usid, 3);//为用户推荐3个物品
 				System.out.print("usid["+usid+"]");
 				for (RecommendedItem recommendedItem : list) {
 					System.out.print(recommendedItem);
