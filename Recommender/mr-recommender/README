@@ -1,0 +1,51 @@
+
+环境：
+	hadoop用户
+	CentOS 7.2.1511 64bit (2G Mem 越大越好)
+	Java 1.8.0_101 64bit
+	Hadoop 2.8.0
+	Mahout 0.12.1
+
+
+/
+als.sh	分布式推荐，此脚本可单独执行
+item.sh	分布式推荐，此脚本可单独执行
+run.sh	执行的前提是step均编译打包，smalldata.txt已上传到hdfs的input中
+smalldata.txt
+step1/Step1.java
+step2/Step2.java
+step4/Step4.java
+step3/1/Step31.java
+step3/2/Step32.java
+		
+
+java常用命令：以编译Step1为例
+	javac Step1.java			编译java文件，产生class文件
+	jar -cvf Step1.jar *.class	将上一部产生的class文件打包成jar
+
+hadoop常用命令：
+	hadoop fs -ls										查看HDFS文件目录
+	hadoop fs -mkdir foldername							创建文件夹
+	hadoop fs -mkdir -p foldername/foldername  			创建一个包含多层次的文件夹
+	hadoop fs -rmr foldername							删除文件夹
+	hadoop fs -rm filename								删除文件
+	hadoop fs -put localfile hdfsfolder 				上传本地文件到HDFS
+	hadoop fs -get hdfsfolder/file 						下载HDFS文件到当前目录
+	hadoop fs -cat hdfsfolder/file 						查看HDFS文件
+	hadoop jar Step4.jar Step4  step4input step4output 	执行job，以Step4为例	
+	
+推荐：
+0.原始推荐数据：smalldata.txt
+1.源码文件：	
+	Step1.java
+	Step2.java
+	Step31.java
+	Step32.java
+	Step4.java
+2.各步输入文件：
+	Step1	原始数据
+	Step2	Step1的输出
+	Step31	Step1的输出
+	Step32	Step2的输出
+	Step4	Step31的输出和Step32的输出
+
