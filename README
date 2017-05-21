@@ -1,6 +1,9 @@
-#####mr-recommender    					分布式推荐
-#####EvaluateUserBasedRecommender.java	评测基于用户的推荐程序	
-#####ItemBasedRecommender.java			基于物品的推荐，通过JDBC加载数据
-#####RecItemBasedExample.java			基于物品的推荐，通过文件加载数据
-#####RecUserBasedExample.java            基于用户的推荐，通过JDBC加载数据
-#####UserBasedRecommender.java           基于用户的推荐，通过文件加载数据
+#Mahout 实例
+
+mr-recommender                              分布式推荐
+
+EvaluateUserBasedRecommender.java           评测基于用户的推荐程序	
+ItemBasedRecommender.java                   基于物品的推荐，通过JDBC加载数据
+RecItemBasedExample.java                    基于物品的推荐，通过文件加载数据
+RecUserBasedExample.java                    基于用户的推荐，通过JDBC加载数据
+UserBasedRecommender.java                   基于用户的推荐，通过文件加载数据
