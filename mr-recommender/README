@@ -21,7 +21,7 @@ step3/2/Step32.java
 
 java常用命令：以编译Step1为例
 	javac Step1.java			编译java文件，产生class文件
-	jar -cvf Step1.jar *.class	将上一部产生的class文件打包成jar
+	jar -cvf Step1.jar *.class	将上一步产生的class文件打包成jar
 
 hadoop常用命令：
 	hadoop fs -ls										查看HDFS文件目录
