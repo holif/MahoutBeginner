@@ -7,6 +7,8 @@ useradd -g hadoop hadoop
 echo '***Input new password by hadoop user***'
 passwd hadoop
 echo 'hadoop  ALL=(ALL)       ALL' >>/etc/sudoers
+echo " ">>/etc/profile
+echo "#set environment variable ">>/etc/profile
 
 cd /opt/
 
