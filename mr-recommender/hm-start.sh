@@ -59,14 +59,10 @@ su - hadoop<<EOF
 ssh-keygen -t rsa
 ssh-copy-id localhost
 
-java -version
-echo '\n'
+hadoop namenode -format
+start-all.sh
+hadoop fs -mkdir -p /user/hadoop
 
-/opt/hadoop/bin/hdfs namenode -format
-/opt/hadoop/sbin/start-dfs.sh
-hadoop version
-echo '\n'
 
-mahout
 
 
