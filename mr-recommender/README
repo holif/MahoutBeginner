@@ -8,6 +8,7 @@
 
 
 /
+hm-start.sh	jdk,hadoop,mahout环境配置脚本
 als.sh	分布式推荐，此脚本可单独执行
 item.sh	分布式推荐，此脚本可单独执行
 run.sh	执行的前提是step均编译打包，smalldata.txt已上传到hdfs的input中
@@ -26,13 +27,13 @@ java常用命令：以编译Step1为例
 hadoop常用命令：
 	hadoop fs -ls										查看HDFS文件目录
 	hadoop fs -mkdir foldername							创建文件夹
-	hadoop fs -mkdir -p foldername/foldername  			创建一个包含多层次的文件夹
+	hadoop fs -mkdir -p foldername/foldername			创建一个包含多层次的文件夹
 	hadoop fs -rmr foldername							删除文件夹
 	hadoop fs -rm filename								删除文件
-	hadoop fs -put localfile hdfsfolder 				上传本地文件到HDFS
-	hadoop fs -get hdfsfolder/file 						下载HDFS文件到当前目录
-	hadoop fs -cat hdfsfolder/file 						查看HDFS文件
-	hadoop jar Step4.jar Step4  step4input step4output 	执行job，以Step4为例	
+	hadoop fs -put localfile hdfsfolder					上传本地文件到HDFS
+	hadoop fs -get hdfsfolder/file						下载HDFS文件到当前目录
+	hadoop fs -cat hdfsfolder/file						查看HDFS文件
+	hadoop jar Step4.jar Step4  step4input step4output	执行job，以Step4为例	
 	
 推荐：
 0.原始推荐数据：smalldata.txt
